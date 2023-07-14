@@ -347,12 +347,12 @@ a {
   padding: 2%;
 }
 
-#stock table:nth-child(odd) {
+#stock table:nth-child(even) {
   float: left;
   margin-left: 5%;
 }
 
-#stock table:nth-child(even) {
+#stock table:nth-child(odd) {
   float: right;
   margin-right: 5%;
 }
@@ -360,6 +360,8 @@ a {
 #stock th,
 td {
   padding: 2%;
+  border-radius: 2px;
+  margin: 0;
 }
 
 #stock th {
