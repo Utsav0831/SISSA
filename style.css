@@ -341,32 +341,26 @@ a {
   opacity: 1;
 }
 
-#stockLists {
-  display: flex;
-  width: 100%;
-}
-
-#stock span {
-  display: flex;
+#stock table {
   width: 40%;
-  align-items: center;
   text-align: center;
-  justify-content: center;
-  margin-left: 4%;
 }
 
-#stock span:nth-child(even) {
+#stock table:nth-child(odd) {
+  float: left;
+  margin-left: 5%;
+}
+
+#stock table:nth-child(even) {
   float: right;
-  margin-left: 15%;
+  margin-right: 5%;
 }
 
-#stock span h3 {
-  margin-right: 17%;
+#stock th,
+td {
+  padding: 2%;
 }
 
-#stock #i,
-#q,
-#p {
-  display: flex;
-  flex-direction: column;
+#stock tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.2);
 }
