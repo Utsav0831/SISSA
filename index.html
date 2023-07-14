@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="icon" href="logo.png" />
+    <script type="text/javascript" src="script.js"></script>
+  </head>
+  <body>
+    <link rel="stylesheet" href="style.css" />
+    <div class="topBar">
+      <img
+        id="SISSA"
+        src="textblack.png"
+        style="margin-left: 1%"
+        onclick="Dashboard()"
+      />
+      <p id="nepalTime">Time</p>
+      <a href="#" class="profile" onclick="Profile()"
+        ><img src="logo.png" id="profile"
+      /></a>
+
+      <div id="profileMenu">
+        <a href=""
+          ><img src="settings.png" style="width: 10%" /><span>Settings</span></a
+        >
+        <a href="#" id="appearance" onmouseover="themes()">
+          <img src="appearance.png" style="width: 12%" />
+          <span>Appearance</span>
+        </a>
+        <a href="">
+          <img src="logout.png" style="width: 9%" />
+          <span>Log Out</span>
+        </a>
+      </div>
+
+      <div id="themes">
+        <a href="#" onclick="light()"><span>Light</span></a>
+        <a href="#" onclick="dark()"><span>Dark</span></a>
+        <a href="#" onclick="lightAni()"><span>Light Animated</span></a>
+        <a href="#" onclick="darkAni()"><span>Dark Animated</span></a>
+      </div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="dashboard">
+      <div class="sideBar">
+        <a
+          id="Dashboard"
+          href="#"
+          onclick="Dashboard()"
+          style="
+            color: rgba(240, 90, 40, 1);
+            font-weight: 700;
+            border-width: 4px;
+            border-style: solid;
+            border-color: rgba(240, 90, 40, 1);
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+          "
+          >Dashboard</a
+        >
+        <a id="Menu" href="#" onclick="Menu()">Menu</a>
+        <a id="Orders" href="#" onclick="Orders()">Orders</a>
+        <a id="Stock" href="#" onclick="Stock()">Stock</a>
+      </div>
+
+      <div class="content">
+        <div id="one">
+          <h2>Dashboard</h2>
+          <h3>Total Orders:</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- MENU -->
+    <div id="menu" class="menu">
+      <div class="sideBar">
+        <a id="Dashboard" href="#" onclick="Dashboard()">Dashboard</a>
+        <a
+          id="Menu"
+          href="#"
+          onclick="Menu()"
+          style="
+            color: rgba(240, 90, 40, 1);
+            font-weight: 700;
+            border-width: 5px;
+            border-style: solid;
+            border-color: rgba(240, 90, 40, 1);
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+          "
+          >Menu</a
+        >
+        <a id="Orders" href="#" onclick="Orders()">Orders</a>
+        <a id="Stock" href="#" onclick="Stock()">Stock</a>
+      </div>
+
+      <div class="content">
+        <div id="one">
+          <h2>Menu</h2>
+          <input id="search" type="text" placeholder="Search ..." />
+          <button id="searchIcon">
+            <img
+              src="https://cdn.onlinewebfonts.com/svg/img_197388.png"
+              alt=""
+            />
+          </button>
+        </div>
+        <a class="addItem" href="#" onclick="addbox()">Add New Item</a>
+
+        <div id="addbox">
+          <h3>Add New Item</h3>
+          <input
+            type="text"
+            placeholder="Section (Drinks, Veg, Non-Veg, ....)"
+            onkeyup="menuItem()"
+          />
+          <input type="text" placeholder="Item" onkeyup="menuItem()" />
+          <input type="text" placeholder="Price" onkeyup="menuItem()" />
+          <div
+            class="buttonssss"
+            style="display: flex; width: 100%; justify-content: center"
+          >
+            <button id="saveButton">Save</button>
+            <button id="cancelButton" onclick="nobox()">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ORDERS -->
+    <div id="orders" class="orders">
+      <div class="sideBar">
+        <a id="Dashboard" href="#" onclick="Dashboard()">Dashboard</a>
+        <a id="Menu" href="#" onclick="Menu()">Menu</a>
+        <a
+          id="Orders"
+          href="#"
+          onclick="Orders()"
+          style="
+            color: rgba(240, 90, 40, 1);
+            font-weight: 700;
+            border-width: 4px;
+            border-style: solid;
+            border-color: rgba(240, 90, 40, 1);
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+          "
+          >Orders</a
+        >
+        <a id="Stock" href="#" onclick="Stock()">Stock</a>
+      </div>
+
+      <div class="content">
+        <div id="one">
+          <h2>Orders</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- STOCK -->
+    <div id="stock" class="stock">
+      <div class="sideBar">
+        <a id="Dashboard" href="#" onclick="Dashboard()">Dashboard</a>
+        <a id="Menu" href="#" onclick="Menu()">Menu</a>
+        <a id="Orders" href="#" onclick="Orders()">Orders</a>
+        <a
+          id="Stock"
+          href="#"
+          onclick="Stock()"
+          style="
+            color: rgba(240, 90, 40, 1);
+            font-weight: 700;
+            border-width: 4px;
+            border-style: solid;
+            border-color: rgba(240, 90, 40, 1);
+            border-top: 0;
+            border-right: 0;
+            border-left: 0;
+          "
+          >Stock</a
+        >
+      </div>
+
+      <div class="content">
+        <div id="one">
+          <h2>Stock</h2>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function getNepalTime() {
+        var currentTime = new Date();
+
+        var nepalTimeOptions = {
+          timeZone: "Asia/Kathmandu",
+          hour12: true,
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        };
+
+        var formattedTime = currentTime.toLocaleTimeString(
+          [],
+          nepalTimeOptions
+        );
+        return formattedTime;
+      }
+
+      // Update the displayed time every second
+      function updateNepalTime() {
+        var nepalTimeElement = document.getElementById("nepalTime");
+        nepalTimeElement.textContent = getNepalTime();
+
+        setTimeout(updateNepalTime, 1000); // Refresh every second
+      }
+
+      updateNepalTime();
+    </script>
+  </body>
+</html>

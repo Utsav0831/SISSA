@@ -1,0 +1,315 @@
+body {
+  background-image: url("https://thumbs.gfycat.com/BitesizedWeeklyAffenpinscher-size_restricted.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.topBar {
+  display: flex;
+  position: relative;
+  height: 8%;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+#nepalTime {
+  position: absolute;
+  left: 50%;
+}
+
+.profile {
+  width: 2%;
+  position: absolute;
+  right: 3%;
+  top: 25%;
+  background-color: rgba(0, 0, 0, 0);
+  padding-top: 0.3%;
+  padding-left: 0.3%;
+  padding-right: 0.3%;
+  border-radius: 50%;
+}
+
+.profile img {
+  width: 100%;
+}
+
+.profile:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#profileMenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  right: 2%;
+  top: 90%;
+  text-align: center;
+  z-index: 1;
+  background-color: rgba(225, 225, 225, 0.8);
+  width: 15%;
+  border-radius: 10px;
+  align-items: center;
+}
+
+#profileMenu p {
+  color: black;
+  border: 0;
+  border-bottom: 1.5px;
+  border-style: solid;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#profileMenu span {
+  align-items: center;
+}
+
+#profileMenu a {
+  color: black;
+  padding: 5%;
+  padding-left: 10%;
+  text-align: left;
+}
+
+#profileMenu a:hover {
+  background-color: rgba(225, 225, 225, 0.5);
+  border-radius: 5px;
+  filter: invert(100%);
+}
+
+#profileMenu a img {
+  margin-right: 10%;
+}
+
+#themes {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  right: 17.5%;
+  top: 200%;
+  text-align: center;
+  z-index: 1;
+  background-color: rgba(225, 225, 225, 0.8);
+  width: 10%;
+  border-radius: 10px;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+#themes span {
+  align-items: center;
+}
+
+#themes a {
+  width: 100%;
+  color: black;
+  padding: 5%;
+  padding-right: 20%;
+  text-align: right;
+}
+
+#themes a:hover {
+  background-color: rgba(225, 225, 225, 0.5);
+  border-radius: 5px;
+  filter: invert(100%);
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  height: 92%;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  height: 92%;
+}
+
+#menu .content a {
+  margin-left: 2%;
+  opacity: 0.5;
+  padding: 0.5%;
+  border-style: dashed;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+#menu .content a:hover {
+  color: rgba(31, 87, 128, 1);
+  border-color: rgba(31, 87, 128, 1);
+  opacity: 1;
+}
+
+.orders {
+  display: none;
+  flex-direction: column;
+  height: 92%;
+}
+
+.stock {
+  display: none;
+  flex-direction: column;
+  height: 92%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.sideBar {
+  text-align: center;
+  height: 5%;
+}
+
+.sideBar a {
+  font-size: large;
+  padding: 0%;
+  margin: 5%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+.sideBar a:hover {
+  font-weight: 700;
+  color: rgba(240, 90, 40, 1);
+}
+
+.content {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.2);
+  padding: 0.5%;
+  width: 80%;
+  height: 90%;
+  margin-left: 10%;
+  margin-top: 0.5%;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.content h2 {
+  margin-left: 2%;
+}
+
+.content h3 {
+  margin-left: 2%;
+  margin-top: 4%;
+}
+
+/* Hide the scrollbar by default */
+.content {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+/* Define scrollbar styles for WebKit-based browsers (Chrome, Safari) */
+.content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+/* Define scrollbar styles for Firefox */
+.content {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  position: relative;
+}
+
+/* Show the scrollbar only when content overflows and user hovers over it */
+.content:hover {
+  scrollbar-color: #999999 #ffffff;
+}
+
+#menu .content #search {
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  right: 1%;
+  top: 5%;
+  padding: 0.5%;
+  width: 25%;
+}
+
+#menu .content #searchIcon {
+  background-color: transparent;
+  border: 0;
+  width: 2.5%;
+  position: absolute;
+  right: 1.5%;
+  top: 5.8%;
+  filter: opacity(50%);
+}
+
+#menu .content #searchIcon:hover {
+  filter: opacity(100%);
+}
+
+#menu .content #searchIcon img {
+  width: 100%;
+}
+
+#menu #addbox {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  display: none;
+  flex-direction: column;
+  text-align: center;
+
+  align-items: center;
+  position: absolute;
+  top: 1%;
+  border-radius: 10px;
+}
+
+#addbox input {
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5%;
+  width: 25%;
+  margin-top: 2.5%;
+  margin-bottom: 2%;
+}
+
+.buttonssss #saveButton,
+.buttonssss #cancelButton {
+  padding: 0.5%;
+  width: 100px;
+  margin-right: 2%;
+  background-color: transparent;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #999999;
+  color: #999999;
+  font-size: medium;
+  font-weight: 600;
+}
+
+.buttonssss #cancelButton {
+  color: red;
+  border-color: red;
+}
+
+.buttonssss #cancelButton:hover {
+  background-color: red;
+  color: white;
+}
