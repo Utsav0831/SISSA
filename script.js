@@ -78,7 +78,7 @@ function light(){
         element.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
       });
 
-    var allLinks = document.querySelectorAll("a,p,h2,h3");
+    var allLinks = document.querySelectorAll("a,p,h2,h3,th,td");
     
     allLinks.forEach(function(link) {
     link.style.color = "rgb(0,0,0)";
@@ -115,7 +115,7 @@ function dark(){
     });
 
     //--------------//
-    var allLinks = document.querySelectorAll("a, p, h2, h3");
+    var allLinks = document.querySelectorAll("a,p,h2,h3,th,td");
     allLinks.forEach(function(link) {
        
             link.style.color = "rgb(255, 255, 255)";
@@ -160,7 +160,7 @@ function lightAni(){
         element.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
       });
 
-    var allLinks = document.querySelectorAll("a,p,h2,h3");
+    var allLinks = document.querySelectorAll("a,p,h2,h3,th,td");
     
     allLinks.forEach(function(link) {
     link.style.color = "rgb(0,0,0)";
@@ -195,7 +195,7 @@ function darkAni(){
         element.style.backgroundColor = "rgba(39, 39, 39, 0.9)";
       });
 
-    var allLinks = document.querySelectorAll("a,p,h2,h3");
+    var allLinks = document.querySelectorAll("a,p,h2,h3,th,td");
     
     allLinks.forEach(function(link) {
     link.style.color = "rgb(255, 255, 255)";

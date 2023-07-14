@@ -344,6 +344,7 @@ a {
 #stock table {
   width: 40%;
   text-align: center;
+  padding: 2%;
 }
 
 #stock table:nth-child(odd) {
@@ -359,6 +360,10 @@ a {
 #stock th,
 td {
   padding: 2%;
+}
+
+#stock th {
+  font-size: large;
 }
 
 #stock tr:nth-child(even) {
