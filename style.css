@@ -158,30 +158,6 @@ body {
   height: 92%;
 }
 
-.stock {
-  display: none;
-  flex-direction: column;
-  height: 92%;
-}
-
-#stock .content a {
-  position: absolute;
-  right: 2%;
-  top: 5%;
-  opacity: 0.5;
-  padding: 0.5%;
-  border-style: dashed;
-  border-radius: 5px;
-  border-width: 2px;
-  border-color: rgba(0, 0, 0, 0.5);
-}
-
-#stock .content a:hover {
-  color: rgba(31, 87, 128, 1);
-  border-color: rgba(31, 87, 128, 1);
-  opacity: 1;
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -339,4 +315,58 @@ a {
 .buttonssss #cancelButton:hover {
   background-color: red;
   color: white;
+}
+
+.stock {
+  display: none;
+  flex-direction: column;
+  height: 92%;
+}
+
+#stock .content a {
+  position: absolute;
+  right: 2%;
+  top: 5%;
+  opacity: 0.5;
+  padding: 0.5%;
+  border-style: dashed;
+  border-radius: 5px;
+  border-width: 2px;
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+#stock .content a:hover {
+  color: rgba(31, 87, 128, 1);
+  border-color: rgba(31, 87, 128, 1);
+  opacity: 1;
+}
+
+#stockLists {
+  display: flex;
+  width: 100%;
+}
+
+#stock span {
+  display: flex;
+  width: 40%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-left: 4%;
+}
+
+#stock span:nth-child(even) {
+  float: right;
+  margin-left: 15%;
+}
+
+#stock span h3 {
+  margin-right: 17%;
+}
+
+#stock #i,
+#q,
+#p {
+  display: flex;
+  flex-direction: column;
 }
