@@ -60,6 +60,8 @@ function themes(){
     if(document.getElementById("profileMenu").style.display=="none"){
         document.getElementById("themes").style.display="none";
     }
+
+    
 }
 
 

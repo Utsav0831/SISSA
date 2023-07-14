@@ -135,7 +135,9 @@ body {
 }
 
 #menu .content a {
-  margin-left: 2%;
+  position: absolute;
+  right: 2%;
+  top: 5%;
   opacity: 0.5;
   padding: 0.5%;
   border-style: dashed;
@@ -238,45 +240,16 @@ a {
   scrollbar-color: #999999 #ffffff;
 }
 
-#menu .content #search {
-  border-radius: 10px;
-  border-color: rgba(0, 0, 0, 0.3);
-  position: absolute;
-  right: 1%;
-  top: 5%;
-  padding: 0.5%;
-  width: 25%;
-}
-
-#menu .content #searchIcon {
-  background-color: transparent;
-  border: 0;
-  width: 2.5%;
-  position: absolute;
-  right: 1.5%;
-  top: 5.8%;
-  filter: opacity(50%);
-}
-
-#menu .content #searchIcon:hover {
-  filter: opacity(100%);
-}
-
-#menu .content #searchIcon img {
-  width: 100%;
-}
-
 #menu #addbox {
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(5px);
+  width: 80%;
+  height: 85%;
+  backdrop-filter: blur(15px);
   display: none;
   flex-direction: column;
   text-align: center;
-
   align-items: center;
-  position: absolute;
-  top: 1%;
+  position: fixed;
+  top: 13.5%;
   border-radius: 10px;
 }
 
@@ -287,6 +260,42 @@ a {
   width: 25%;
   margin-top: 2.5%;
   margin-bottom: 2%;
+}
+
+#menu #lists div {
+  width: 30%;
+  margin-left: 2%;
+  padding: 1.5%;
+  display: flex;
+  flex-direction: column;
+}
+
+#menu #list h3 {
+  font-size: larger;
+}
+
+#menu #lists p {
+  margin: 0;
+  margin-left: 2%;
+  width: 100%;
+  font-weight: 450;
+  padding: 0.5%;
+}
+
+#menu #lists span {
+  float: right;
+  font-weight: 600;
+}
+
+#menu #lists div:nth-child(odd) {
+  float: left;
+  display: flex;
+  flex-direction: column;
+}
+
+#menu #lists div:nth-child(even) {
+  float: right;
+  margin-right: 3%;
 }
 
 .buttonssss #saveButton,
