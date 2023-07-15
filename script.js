@@ -263,7 +263,7 @@ function lightAni(){
 }
 
 function darkAni(){
-    document.body.style.backgroundImage = "url('https://j.gifs.com/j2VzyP.gif')";
+    document.body.style.backgroundImage = "url('https://i.pinimg.com/originals/dc/7b/9b/dc7b9b31d491c5b44174436cddf0411f.gif')";
     document.querySelectorAll(".content *").forEach(function(borders){
         borders.style.borderColor = "rgba(255,255,255,0.2)"
     })
