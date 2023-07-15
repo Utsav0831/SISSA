@@ -266,9 +266,12 @@ function darkAni(){
     document.body.style.backgroundImage = "url('https://i.pinimg.com/originals/dc/7b/9b/dc7b9b31d491c5b44174436cddf0411f.gif')";
     document.querySelectorAll(".content *").forEach(function(borders){
         borders.style.borderColor = "rgba(255,255,255,0.2)"
-    })
+    });
+
+    
 
     document.getElementById("SISSA").src = "text.png";
+
 
     document.querySelectorAll("#profileMenu img, .settings .content a img").forEach(function(image){
         image.style.filter="invert(100%)";
@@ -287,6 +290,21 @@ function darkAni(){
 
     document.querySelectorAll(".settings #errors p").forEach(function(cons){
         cons.style.color="";
+    });
+
+    var elements = document.querySelectorAll("#profileMenu a, #themes a");
+    elements.forEach(function(element) {
+    element.addEventListener("mouseenter", function() {
+        this.style.backgroundColor = "rgba(0,0,0,0.5)";
+        this.style.filter = "invert(100%)";
+    });
+});
+
+    elements.forEach(function(element){
+        element.addEventListener("mouseleave", function(){
+            this.style.backgroundColor = "";
+        this.style.filter = "";
+        })
     });
 }
 
