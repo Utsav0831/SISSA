@@ -23,7 +23,7 @@
       /></a>
 
       <div id="profileMenu">
-        <a href=""
+        <a href="#" onclick="Settings()"
           ><img src="settings.png" style="width: 10%" /><span>Settings</span></a
         >
         <a href="#" id="appearance" onmouseover="themes()">
@@ -118,12 +118,15 @@
 
         <div id="addbox">
           <h3>Add New Item</h3>
+
           <input
             type="text"
             placeholder="Section (Drinks, Veg, Non-Veg, ....)"
             onkeyup="menuItem()"
           />
+
           <input type="text" placeholder="Item" onkeyup="menuItem()" />
+
           <input type="text" placeholder="Price" onkeyup="menuItem()" />
           <div
             class="buttonssss"
@@ -247,6 +250,66 @@
             <td>500</td>
           </tr>
         </table>
+      </div>
+    </div>
+
+    <!-- SETTINGS -->
+    <div id="settings" class="settings">
+      <div class="sideBar">
+        <a id="Dashboard" href="#" onclick="Dashboard()">Dashboard</a>
+        <a id="Menu" href="#" onclick="Menu()">Menu</a>
+        <a id="Orders" href="#" onclick="Orders()">Orders</a>
+        <a id="Stock" href="#" onclick="Stock()">Stock</a>
+      </div>
+
+      <div class="content">
+        <div id="one">
+          <h2>Settings</h2>
+        </div>
+        <a id="privacy" href="#" onclick="Privacy()"
+          >Privacy
+          <img
+            src="https://th.bing.com/th/id/R.62f56f410f57aa704c62d874e9975e1c?rik=tNrOEc15FoCYOA&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fdownload_130122.png&ehk=x1jJr7sagXbHMSFvsu%2bsidrsgx36O1ofZa0WQXo2Pr0%3d&risl=&pid=ImgRaw&r=0"
+            alt=""
+        /></a>
+        <div class="Privacy">
+          <h3
+            style="
+              font-weight: 500;
+              width: 100%;
+              padding-top: 0;
+              margin-top: 1%;
+              margin-bottom: 2%;
+              text-align: center;
+            "
+          >
+            Change Password
+          </h3>
+          <p>
+            Current Password
+            <input
+              type="password"
+              name="current_password"
+              placeholder="Current Password ..."
+            />
+          </p>
+          <p>
+            New Password
+            <input
+              type="password"
+              name="new_password"
+              placeholder="New Password ..."
+            />
+          </p>
+          <p>
+            Confirm Password
+            <input
+              type="password"
+              name="confirm_password"
+              placeholder="Confirm Password ..."
+            />
+          </p>
+        </div>
       </div>
     </div>
 

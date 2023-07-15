@@ -15,6 +15,7 @@ function Dashboard(){
     document.getElementById("menu").style.display="none";
     document.getElementById("orders").style.display="none";
     document.getElementById("stock").style.display="none";
+    document.getElementById("settings").style.display="none";
 }
 
 function Menu(){
@@ -24,6 +25,7 @@ function Menu(){
     document.getElementById("dashboard").style.display="none";
     document.getElementById("orders").style.display="none";
     document.getElementById("stock").style.display="none";
+    document.getElementById("settings").style.display="none";
 }
 
 function Orders(){
@@ -33,6 +35,7 @@ function Orders(){
     document.getElementById("dashboard").style.display="none";
     document.getElementById("orders").style.display="flex";
     document.getElementById("stock").style.display="none";
+    document.getElementById("settings").style.display="none";
 }
 
 function Stock(){
@@ -42,6 +45,49 @@ function Stock(){
     document.getElementById("dashboard").style.display="none";
     document.getElementById("orders").style.display="none";
     document.getElementById("stock").style.display="flex";
+    document.getElementById("settings").style.display="none";
+}
+
+document.addEventListener('click', function(event){
+    var icmenu = document.getElementById("profile");
+    var mymenu = document.getElementById("profileMenu");
+    var themes = document.getElementById("themes");
+
+    if(!icmenu.contains(event.target) && !mymenu.contains(event.target)){
+        mymenu.style.display="none";
+        themes.style.display="none";
+    }
+});
+
+function Settings(){
+    document.title = "Settings";
+    
+    document.getElementById("menu").style.display="none";
+    document.getElementById("dashboard").style.display="none";
+    document.getElementById("orders").style.display="none";
+    document.getElementById("stock").style.display="none";
+    document.getElementById("settings").style.display="flex";
+
+    document.getElementById("profileMenu").style.display="none";
+}
+
+function Privacy(){
+
+    if(document.querySelector(".Privacy").style.display=="flex"){
+        document.querySelector("#privacy").addEventListener("mousedown", function(){
+            document.querySelector(".Privacy").style.display = "none";
+            document.querySelector("#privacy img").style.transform = "rotate(0deg)";
+            document.querySelector("#privacy").style.fontWeight = "";
+        })
+    }
+
+    else{
+        document.querySelector("#privacy").addEventListener("mousedown", function(){
+            document.querySelector("#privacy img").style.transform = "rotate(90deg)";
+            document.querySelector("#privacy").style.fontWeight = "700";
+            document.querySelector(".Privacy").style.display="flex";
+        })
+    }
 }
 
 document.addEventListener('click', function(event){
@@ -68,9 +114,12 @@ function themes(){
 function light(){
     document.body.style.backgroundImage = "none";
     document.body.style.backgroundColor = "rgba(242, 242, 242, 1)";
+    document.querySelectorAll(".content *").forEach(function(borders){
+        borders.style.borderColor = "rgba(0,0,0,0.2)"
+    });
     document.getElementById("SISSA").src = "textblack.png";
 
-    document.querySelectorAll("#profileMenu img").forEach(function(image){
+    document.querySelectorAll("#profileMenu img, .settings .content a img").forEach(function(image){
         image.style.filter="invert(0%)";
     });
 
@@ -105,12 +154,15 @@ function light(){
 function dark(){
     document.body.style.backgroundImage = "none";
     document.body.style.backgroundColor = "rgba(15, 15, 15, 1)";
+    document.querySelectorAll(".content *").forEach(function(borders){
+        borders.style.borderColor = "rgba(255,255,255,0.2)"
+    });
     document.querySelectorAll(".content, #profileMenu, #themes").forEach(function(element) {
         element.style.backgroundColor = "rgba(39, 39, 39, 0.8)";
       });
     document.getElementById("SISSA").src = "text.png";
 
-    document.querySelectorAll("#profileMenu img").forEach(function(image){
+    document.querySelectorAll("#profileMenu img, .settings .content a img").forEach(function(image){
         image.style.filter="invert(100%)";
     });
 
@@ -150,9 +202,13 @@ function dark(){
 
 function lightAni(){
     document.body.style.backgroundImage = "url('https://thumbs.gfycat.com/BitesizedWeeklyAffenpinscher-size_restricted.gif')";
+    document.querySelectorAll(".content *").forEach(function(borders){
+        borders.style.borderColor = "rgba(0,0,0,0.2)";
+    })
+
     document.getElementById("SISSA").src = "textblack.png";
 
-    document.querySelectorAll("#profileMenu img").forEach(function(image){
+    document.querySelectorAll("#profileMenu img, .settings .content a img").forEach(function(image){
         image.style.filter="invert(0%)";
     });
 
@@ -184,9 +240,13 @@ function lightAni(){
 
 function darkAni(){
     document.body.style.backgroundImage = "url('https://j.gifs.com/j2VzyP.gif')";
+    document.querySelectorAll(".content *").forEach(function(borders){
+        borders.style.borderColor = "rgba(255,255,255,0.2)"
+    })
+
     document.getElementById("SISSA").src = "text.png";
 
-    document.querySelectorAll("#profileMenu img").forEach(function(image){
+    document.querySelectorAll("#profileMenu img, .settings .content a img").forEach(function(image){
         image.style.filter="invert(100%)";
     });
 
@@ -256,6 +316,6 @@ function menuItem() {
     }
   }
   
-  if (document.querySelector("#addbox").style.display === "flex") {
+  if (document.getElementById("addbox").style.display === "flex") {
     setInterval(menuItem, 500);
   }
