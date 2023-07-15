@@ -1,5 +1,6 @@
 body {
-  background-image: url("https://thumbs.gfycat.com/BitesizedWeeklyAffenpinscher-size_restricted.gif");
+  background-image: none;
+  background-color: rgba(242, 242, 242, 1);
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
@@ -293,7 +294,8 @@ a {
 }
 
 .buttonssss #saveButton,
-.buttonssss #cancelButton {
+.buttonssss #cancelButton,
+.buttonssss #saveStock {
   padding: 0.5%;
   width: 100px;
   margin-right: 2%;
@@ -321,6 +323,28 @@ a {
   display: none;
   flex-direction: column;
   height: 92%;
+}
+
+.stock #addStuff {
+  width: 80%;
+  height: 85%;
+  backdrop-filter: blur(15px);
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  position: fixed;
+  top: 13.5%;
+  border-radius: 10px;
+}
+
+#addStuff input {
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.3);
+  padding: 0.5%;
+  width: 25%;
+  margin-top: 1%;
+  margin-bottom: 2%;
 }
 
 #stock .content a {
@@ -399,6 +423,7 @@ td {
 }
 
 .settings .Privacy {
+  position: relative;
   display: none;
   flex-direction: column;
   width: 97%;
@@ -414,6 +439,24 @@ td {
   width: 50%;
   padding: 1%;
   align-items: center;
+}
+
+.settings #errors {
+  position: absolute;
+  top: 19.5%;
+  right: 29%;
+}
+
+.settings #errors p {
+  width: 45%;
+  margin-left: 5%;
+  padding: 1%;
+  align-items: center;
+  color: red;
+  float: right;
+  margin-bottom: 11%;
+  font-size: small;
+  font-weight: 500;
 }
 
 .settings .Privacy p input {

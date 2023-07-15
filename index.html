@@ -133,7 +133,7 @@
 
           <input type="text" placeholder="Item" onkeyup="menuItem()" />
 
-          <input type="text" placeholder="Price" onkeyup="menuItem()" />
+          <input type="number" placeholder="Price" onkeyup="menuItem()" />
           <div
             class="buttonssss"
             style="display: flex; width: 100%; justify-content: center"
@@ -201,7 +201,7 @@
       <div class="content">
         <div id="one">
           <h2>Stock</h2>
-          <a href="#">Add New Item</a>
+          <a href="#" onclick="addStuff()">Add New Item</a>
         </div>
         <table>
           <tr>
@@ -254,6 +254,24 @@
             <td>500</td>
           </tr>
         </table>
+
+        <div id="addStuff">
+          <h3>Add Stock</h3>
+          <input type="text" placeholder="Item" onkeyup="stockItem()" />
+          <input
+            type="number"
+            placeholder="Price per piece"
+            onkeyup="stockItem()"
+          />
+          <input type="number" placeholder="Quantity" onkeyup="stockItem()" />
+          <div
+            class="buttonssss"
+            style="display: flex; width: 100%; justify-content: center"
+          >
+            <button id="saveStock">Save</button>
+            <button id="cancelButton" onclick="nobox()">Close</button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -317,6 +335,12 @@
             />
           </p>
           <button id="saveChange">Save</button>
+
+          <div id="errors">
+            <p>Incorrect Password.</p>
+            <p>Try to have atleast 8 characters.</p>
+            <p>Passwords don't match.</p>
+          </div>
         </div>
       </div>
     </div>

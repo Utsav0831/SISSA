@@ -162,7 +162,9 @@ function light(){
         })
     });
 
-    
+    document.querySelectorAll(".settings #errors p").forEach(function(cons){
+        cons.style.color="";
+    });
 }
 
 function dark(){
@@ -212,6 +214,10 @@ function dark(){
         })
     });
     //--------------//
+
+    document.querySelectorAll(".settings #errors p").forEach(function(cons){
+        cons.style.color="";
+    });
 }
 
 function lightAni(){
@@ -250,6 +256,10 @@ function lightAni(){
         this.style.filter = "";
         })
     });
+
+    document.querySelectorAll(".settings #errors p").forEach(function(cons){
+        cons.style.color="";
+    });
 }
 
 function darkAni(){
@@ -274,12 +284,20 @@ function darkAni(){
     allLinks.forEach(function(link) {
     link.style.color = "rgb(255, 255, 255)";
     });
+
+    document.querySelectorAll(".settings #errors p").forEach(function(cons){
+        cons.style.color="";
+    });
 }
 
 //---------------------------------------------------------------------------------------------------------
 
 function addbox(){
     document.getElementById("addbox").style.display="flex";
+}
+
+function addStuff(){
+    document.getElementById("addStuff").style.display="flex";
 }
 
 //---------------------------------------------------------------------------------------------------------
@@ -293,7 +311,17 @@ function nobox(){
     value2.value="";
     value3.value=""
 
+    var fields = document.querySelectorAll("#addStuff input");
+    var value1 = fields[0];
+    var value2 = fields[1];
+    var value3 = fields[2];
+
+    value1.value="";
+    value2.value="";
+    value3.value=""
+
     document.getElementById("addbox").style.display="none";
+    document.getElementById("addStuff").style.display="none";
 }
 //---------------------------------------------------------------------------------------------------------
 
@@ -337,6 +365,44 @@ function menuItem() {
 
 //---------------------------------------------------------------------------------------------------------
   
+function stockItem() {
+    var fields = document.querySelectorAll("#addStuff input");
+    var value1 = fields[0].value.trim();
+    var value2 = fields[1].value.trim();
+    var value3 = fields[2].value.trim();
+  
+    if (value1 !== "" && value2 !== "" && value3 !== "") {
+      document.getElementById("saveStock").style.color = "green";
+      document.getElementById("saveStock").style.borderColor = "green";
+
+      document.getElementById("saveStock").addEventListener("mouseenter", function(){
+        document.getElementById("saveStock").style.color="white";
+        document.getElementById("saveStock").style.backgroundColor="green";
+      });
+
+      document.getElementById("saveStock").addEventListener("mouseleave", function(){
+        document.getElementById("saveStock").style.color="green";
+        document.getElementById("saveStock").style.backgroundColor="transparent";
+      });
+    }
+
+    else{
+        document.getElementById("saveStock").style.color = "";
+        document.getElementById("saveStock").style.borderColor = "";
+        
+        document.getElementById("saveStock").addEventListener("mouseenter", function(){
+            document.getElementById("saveStock").style.color="";
+            document.getElementById("saveStock").style.backgroundColor="";
+          });
+    
+          document.getElementById("saveStock").addEventListener("mouseleave", function(){
+            document.getElementById("saveStock").style.color="";
+            document.getElementById("saveStock").style.backgroundColor="";
+          });
+    }
+  }
+
+//---------------------------------------------------------------------------------------------------------
 
 
 //---------------------------------------------------------------------------------------------------------
