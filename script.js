@@ -116,6 +116,11 @@ function themes(){
         document.getElementById("themes").style.display="none";
     }
 
+    document.getElementById("themes").addEventListener("mouseenter",function(){
+        setInterval(document.getElementById("themes").addEventListener("mouseleave",function(){
+            document.getElementById("themes").style.display="none";
+        }),1000);
+    });
     
 }
 

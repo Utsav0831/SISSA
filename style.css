@@ -178,7 +178,7 @@ a {
 
 .sideBar a:hover {
   font-weight: 700;
-  color: rgba(240, 90, 40, 1);
+  transition: 0.3 ease-in;
 }
 
 .content {
