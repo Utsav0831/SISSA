@@ -78,6 +78,15 @@ function Privacy(){
             document.querySelector(".Privacy").style.display = "none";
             document.querySelector("#privacy img").style.transform = "rotate(0deg)";
             document.querySelector("#privacy").style.fontWeight = "";
+
+            var fields = document.querySelectorAll(".settings .Privacy p input");
+            var value1 = fields[0];
+            var value2 = fields[1];
+            var value3 = fields[2];
+
+            value1.value = "";
+            value2.value = "";
+            value3.value = "";
         })
     }
 
@@ -262,10 +271,13 @@ function darkAni(){
     });
 }
 
+//---------------------------------------------------------------------------------------------------------
+
 function addbox(){
     document.getElementById("addbox").style.display="flex";
 }
 
+//---------------------------------------------------------------------------------------------------------
 function nobox(){
     var fields = document.querySelectorAll("#addbox input");
     var value1 = fields[0];
@@ -278,7 +290,9 @@ function nobox(){
 
     document.getElementById("addbox").style.display="none";
 }
+//---------------------------------------------------------------------------------------------------------
 
+//---------------------------------------------------------------------------------------------------------
 function menuItem() {
     var fields = document.querySelectorAll("#addbox input");
     var value1 = fields[0].value.trim();
@@ -315,7 +329,65 @@ function menuItem() {
           });
     }
   }
+
+//---------------------------------------------------------------------------------------------------------
   
-  if (document.getElementById("addbox").style.display === "flex") {
-    setInterval(menuItem, 500);
+
+
+//---------------------------------------------------------------------------------------------------------
+  function passwords(){
+    var fields = document.querySelectorAll(".settings .Privacy p input");
+    var value1 = fields[0].value;
+    var value2 = fields[1].value;
+    var value3 = fields[2].value;
+  
+    if (value1 !== "" && value2 !== "" && value3 !== "") {
+        if(value2==value3){
+            document.getElementById("saveChange").style.color = "green";
+            document.getElementById("saveChange").style.borderColor = "green";
+
+            document.getElementById("saveChange").addEventListener("mouseenter", function(){
+                document.getElementById("saveChange").style.color="white";
+                document.getElementById("saveChange").style.backgroundColor="green";
+            });
+
+            document.getElementById("saveChange").addEventListener("mouseleave", function(){
+                document.getElementById("saveChange").style.color="green";
+                document.getElementById("saveChange").style.backgroundColor="transparent";
+            });
+
+        }
+
+        else{
+            document.getElementById("saveChange").style.color = "";
+        document.getElementById("saveChange").style.borderColor = "";
+        
+        document.getElementById("saveChange").addEventListener("mouseenter", function(){
+            document.getElementById("saveChange").style.color="";
+            document.getElementById("saveChange").style.backgroundColor="";
+          });
+    
+          document.getElementById("saveChange").addEventListener("mouseleave", function(){
+            document.getElementById("saveChange").style.color="";
+            document.getElementById("saveChange").style.backgroundColor="";
+          });
+        }
+      
+    }
+
+    else{
+        document.getElementById("saveChange").style.color = "";
+        document.getElementById("saveChange").style.borderColor = "";
+        
+        document.getElementById("saveChange").addEventListener("mouseenter", function(){
+            document.getElementById("saveChange").style.color="";
+            document.getElementById("saveChange").style.backgroundColor="";
+          });
+    
+          document.getElementById("saveChange").addEventListener("mouseleave", function(){
+            document.getElementById("saveChange").style.color="";
+            document.getElementById("saveChange").style.backgroundColor="";
+          });
+    }
   }
+  //---------------------------------------------------------------------------------------------------------

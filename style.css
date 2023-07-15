@@ -413,6 +413,7 @@ td {
 .settings .Privacy p {
   width: 50%;
   padding: 1%;
+  align-items: center;
 }
 
 .settings .Privacy p input {
@@ -422,4 +423,20 @@ td {
   width: 50%;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.2);
+}
+
+.settings .Privacy button {
+  width: 10%;
+  text-align: center;
+  padding: 0.5%;
+  margin-left: 48%;
+  margin-bottom: 2%;
+  background-color: transparent;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #999999;
+  color: #999999;
+  font-size: medium;
+  font-weight: 600;
 }

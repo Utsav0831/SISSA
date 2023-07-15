@@ -291,6 +291,7 @@
               type="password"
               name="current_password"
               placeholder="Current Password ..."
+              onkeyup="passwords()"
             />
           </p>
           <p>
@@ -299,6 +300,7 @@
               type="password"
               name="new_password"
               placeholder="New Password ..."
+              onkeyup="passwords()"
             />
           </p>
           <p>
@@ -307,8 +309,10 @@
               type="password"
               name="confirm_password"
               placeholder="Confirm Password ..."
+              onkeyup="passwords()"
             />
           </p>
+          <button id="saveChange">Save</button>
         </div>
       </div>
     </div>
