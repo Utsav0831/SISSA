@@ -360,7 +360,7 @@ function editMenu(){
         document.querySelector("#menu #addbox h3").textContent="Edit Item";
         document.getElementById("addbox").style.display = "flex";
 
-        var section = this.parentNode.querySelector("h3").textContent.substring(15);
+        var section = this.parentNode.querySelector("h3").textContent;
         var item = this.textContent.slice(0,-(this.querySelector("span").textContent.length));
         var price = this.querySelector("span").textContent.substring(4);
 

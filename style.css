@@ -285,11 +285,11 @@ a {
 #menu #editMenu {
   position: relative;
   border: 0;
-  margin-left: 5%;
+  margin-left: 3%;
 }
 
 #menu #editMenu img {
-  width: 5%;
+  width: 1.5%;
 }
 
 #menu #lists p {
