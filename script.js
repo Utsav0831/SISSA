@@ -350,7 +350,7 @@ function editMenu(){
 
     setInterval(function(){
         document.getElementById("alert").style.display="none";
-    },3000);
+    },5000);
 
     var paragraphs = document.querySelectorAll("#lists p");
     var i = 0;
