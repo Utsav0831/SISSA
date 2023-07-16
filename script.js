@@ -133,11 +133,11 @@ function light(){
     });
     document.getElementById("SISSA").src = "textblack.png";
 
-    document.querySelectorAll("#profileMenu img, .settings .content a img").forEach(function(image){
+    document.querySelectorAll("#profileMenu img, .settings .content a img, #menu #editMenu img").forEach(function(image){
         image.style.filter="invert(0%)";
     });
 
-    document.querySelectorAll(".content, #profileMenu, #themes").forEach(function(element) {
+    document.querySelectorAll(".content, #profileMenu, #themes, #alert").forEach(function(element) {
         element.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
       });
 
@@ -173,12 +173,12 @@ function dark(){
     document.querySelectorAll(".content *").forEach(function(borders){
         borders.style.borderColor = "rgba(255,255,255,0.2)"
     });
-    document.querySelectorAll(".content, #profileMenu, #themes").forEach(function(element) {
+    document.querySelectorAll(".content, #profileMenu, #themes, #alert").forEach(function(element) {
         element.style.backgroundColor = "rgba(39, 39, 39, 0.8)";
       });
     document.getElementById("SISSA").src = "text.png";
 
-    document.querySelectorAll("#profileMenu img, .settings .content a img").forEach(function(image){
+    document.querySelectorAll("#profileMenu img, .settings .content a img, #menu #editMenu img").forEach(function(image){
         image.style.filter="invert(100%)";
     });
 
@@ -228,11 +228,11 @@ function lightAni(){
 
     document.getElementById("SISSA").src = "textblack.png";
 
-    document.querySelectorAll("#profileMenu img, .settings .content a img").forEach(function(image){
+    document.querySelectorAll("#profileMenu img, .settings .content a img, #menu #editMenu img").forEach(function(image){
         image.style.filter="invert(0%)";
     });
 
-    document.querySelectorAll(".content, #profileMenu, #themes").forEach(function(element) {
+    document.querySelectorAll(".content, #profileMenu, #themes, #alert").forEach(function(element) {
         element.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
       });
 
@@ -273,12 +273,12 @@ function darkAni(){
     document.getElementById("SISSA").src = "text.png";
 
 
-    document.querySelectorAll("#profileMenu img, .settings .content a img").forEach(function(image){
+    document.querySelectorAll("#profileMenu img, .settings .content a img, #menu #editMenu img").forEach(function(image){
         image.style.filter="invert(100%)";
     });
 
 
-    document.querySelectorAll(".content, #profileMenu, #themes").forEach(function(element) {
+    document.querySelectorAll(".content, #profileMenu, #themes, #alert").forEach(function(element) {
         element.style.backgroundColor = "rgba(39, 39, 39, 0.9)";
       });
 
@@ -320,6 +320,8 @@ function addStuff(){
 
 //---------------------------------------------------------------------------------------------------------
 function nobox(){
+    document.querySelector("#menu #addbox h3").textContent="Add New Item";
+
     var fields = document.querySelectorAll("#addbox input");
     var value1 = fields[0];
     var value2 = fields[1];
@@ -336,12 +338,43 @@ function nobox(){
 
     value1.value="";
     value2.value="";
-    value3.value=""
+    value3.value="";
 
     document.getElementById("addbox").style.display="none";
     document.getElementById("addStuff").style.display="none";
 }
 //---------------------------------------------------------------------------------------------------------
+
+function editMenu(){
+    document.getElementById("alert").style.display="block";
+
+    setInterval(function(){
+        document.getElementById("alert").style.display="none";
+    },3000);
+
+    var paragraphs = document.querySelectorAll("#lists p");
+    var i = 0;
+    
+    for (var i = 0; i < paragraphs.length; i++) {
+      paragraphs[i].addEventListener("click", function() {
+        document.querySelector("#menu #addbox h3").textContent="Edit Item";
+        document.getElementById("addbox").style.display = "flex";
+
+        var section = this.parentNode.querySelector("h3").textContent.substring(15);
+        var item = this.textContent.slice(0,-(this.querySelector("span").textContent.length));
+        var price = this.querySelector("span").textContent.substring(4);
+
+        var fields = document.querySelectorAll("#addbox input");
+        var value1 = fields[0];
+        var value2 = fields[1];
+        var value3 = fields[2];
+
+        value1.value=section;
+        value2.value=item;
+        value3.value=price;
+      });
+    } 
+}
 
 //---------------------------------------------------------------------------------------------------------
 function menuItem() {
