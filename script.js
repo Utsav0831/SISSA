@@ -162,7 +162,7 @@ function light(){
         })
     });
 
-    document.querySelectorAll(".settings #errors p").forEach(function(cons){
+    document.querySelectorAll(".settings #errors p, #menu #alert").forEach(function(cons){
         cons.style.color="";
     });
 }
@@ -215,7 +215,7 @@ function dark(){
     });
     //--------------//
 
-    document.querySelectorAll(".settings #errors p").forEach(function(cons){
+    document.querySelectorAll(".settings #errors p, #menu #alert").forEach(function(cons){
         cons.style.color="";
     });
 }
@@ -257,7 +257,7 @@ function lightAni(){
         })
     });
 
-    document.querySelectorAll(".settings #errors p").forEach(function(cons){
+    document.querySelectorAll(".settings #errors p, #menu #alert").forEach(function(cons){
         cons.style.color="";
     });
 }
@@ -288,7 +288,7 @@ function darkAni(){
     link.style.color = "rgb(255, 255, 255)";
     });
 
-    document.querySelectorAll(".settings #errors p").forEach(function(cons){
+    document.querySelectorAll(".settings #errors p, #menu #alert").forEach(function(cons){
         cons.style.color="";
     });
 
@@ -357,6 +357,7 @@ function editMenu(){
     
     for (var i = 0; i < paragraphs.length; i++) {
       paragraphs[i].addEventListener("click", function() {
+        document.getElementById("alert").style.display="none";
         document.querySelector("#menu #addbox h3").textContent="Edit Item";
         document.getElementById("addbox").style.display = "flex";
 
