@@ -56,8 +56,15 @@ body {
   text-align: center;
   margin-top: 7%;
   border-radius: 10px;
-
+  color: rgb(73, 73, 73);
   font-weight: 600;
+  transition: 0.2s ease-in;
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+#signin button:hover {
+  opacity: 0.9;
+  font-weight: 700;
 }
 
 #signin #aregister {
@@ -118,8 +125,15 @@ body {
   text-align: center;
   margin-top: 6%;
   border-radius: 10px;
-
+  transition: 0.2s ease-in;
   font-weight: 600;
+  color: rgb(73, 73, 73);
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+#signup button:hover {
+  opacity: 0.9;
+  font-weight: 700;
 }
 
 #signup #alogin {

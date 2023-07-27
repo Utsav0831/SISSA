@@ -29,3 +29,37 @@ function login() {
     }, 50);
   });
 }
+
+function logininputs(){
+  var myfields = document.querySelectorAll("#signin input");
+  var field1 = myfields[0].value;
+  var field2 = myfields[1].value;
+
+  if(field1 != "" && field2 != ""){
+    document.querySelector("#signin button").style.backgroundColor = "rgba(240, 90, 40, 1)";
+    document.querySelector("#signin button").style.color = "white";
+  }
+
+  else{
+    document.querySelector("#signin button").style.backgroundColor = "";
+    document.querySelector("#signin button").style.color = "";
+  }
+}
+
+function registerinputs(){
+  var myfields = document.querySelectorAll("#signup input");
+  var field1 = myfields[0].value;
+  var field2 = myfields[1].value;
+  var field3 = myfields[2].value;
+  var field4 = myfields[3].value;
+
+  if(field1 != "" && field2 != "" && field3 != "" && field4 != ""){
+    document.querySelector("#signup button").style.backgroundColor = "rgb(15, 168, 15)";
+    document.querySelector("#signup button").style.color = "white";
+  }
+
+  else{
+    document.querySelector("#signup button").style.backgroundColor = "";
+    document.querySelector("#signup button").style.color = "";
+  }
+}
